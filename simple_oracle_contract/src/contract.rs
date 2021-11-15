@@ -19,7 +19,7 @@ pub fn instantiate(
     _msg: InstantiateMsg,
 ) -> Result<Response, ContractError> {
     set_contract_version(deps.storage, CONTRACT_NAME, CONTRACT_VERSION)?;
-    
+
     OWNER.save(deps.storage, &info.sender.into())?;
     Ok(Response::default())
 }
@@ -143,5 +143,4 @@ mod tests {
         let value: PriceResponse = from_binary(&res).unwrap();
         assert_eq!(0, value.price);
     }
-
 }
