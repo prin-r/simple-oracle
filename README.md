@@ -23,7 +23,7 @@ This server will fetch and aggregate prices of the above assets from Binance and
 ```
 
 ##### Price Feeder
-This is the service that will be responsible for fetching prices from the price server and asynchronously sending price update transactions to the oracle smart contract on the Terra blockchain.
+This is the service that will be responsible for fetching prices from the price server and asynchronously sending price update transactions to the oracle smart contract on the chain.
 However, price update transactions will only be sent if the new price fetched from Binance differs from the price value available on the contract by more than 0.1%.
 
 ![img](https://user-images.githubusercontent.com/12705423/141727453-3778d96c-527f-4bfc-b213-c56f098fc955.png)
